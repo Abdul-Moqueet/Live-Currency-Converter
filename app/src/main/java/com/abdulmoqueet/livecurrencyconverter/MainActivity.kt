@@ -3,10 +3,7 @@ package com.abdulmoqueet.livecurrencyconverter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.Spinner
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -49,9 +46,7 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-
-                ivFlag.setImageResource(R.drawable.brazil)
-
+                ivFlag.setImageResource(flag[position])
             }
 
 
