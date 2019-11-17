@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Live Currency Converter</string>
+    <string name="converter">Converter</string>
+
+    <string-array name="currency">
+
+        <item>USD</item>
+        <item>GBP</item>
+        <item>INR</item>
+        <item>CNY</item>
+        <item>JPY</item>
+        <item>AUD</item>
+        <item>EUR</item>
+        <item>BRL</item>
+        <item>CAD</item>
+        <item>IDR</item>
+        <item>MXN</item>
+        <item>HRK</item>
+
+    </string-array>
+
+
+</resources>
