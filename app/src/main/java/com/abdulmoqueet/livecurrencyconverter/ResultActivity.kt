@@ -52,18 +52,17 @@ class ResultActivity : AppCompatActivity() {
 
     private fun getCurrencyValues(flag:Array<Int>) {
 
-        val baseCurrency = intent.getStringExtra("Base")
+        val baseCurrency:String = intent.getStringExtra("Base")!!
         val input = intent.getDoubleExtra("input", 0.0)
         val index = intent.getIntExtra("index", 0)
 
-//        Toast.makeText(this, "index = $index", Toast.LENGTH_SHORT).show()
-
-        val url = "https://api.exchangeratesapi.io/latest?base=" + baseCurrency!!
+        val url = "https://api.exchangeratesapi.io/latest?base=$baseCurrency"
 
         val queue = Volley.newRequestQueue(this)
 
         val getRequest = JsonObjectRequest(Request.Method.GET, url, null,
-            Response.Listener<JSONObject> { response ->
+            Response.Listener<JSONObject> {
+                    response ->
                 try {
 
                     val jsonObject = response.getJSONObject("rates")
